@@ -73,7 +73,7 @@ class _LoginState extends State<Login> {
                       Container(
                         width: MediaQuery.of(context).size.width,
                         height: 50,
-                        child: FlatButton(
+                        child: MaterialButton(
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
                               print(email.text);
