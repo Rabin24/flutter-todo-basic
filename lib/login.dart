@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use, unnecessary_new, avoid_unnecessary_containers, non_constant_identifier_names, library_private_types_in_public_api, duplicate_ignore, avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:todo_basic/todo.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -75,12 +76,19 @@ class _LoginState extends State<Login> {
                         height: 50,
                         child: MaterialButton(
                           onPressed: () {
-                            if (_formKey.currentState!.validate()) {
-                              print(email.text);
-                              print(password.text);
-                              print('success');
-                            }
+                            //navigate to todo.dart
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const name()),
+                            );
                           },
+
+                          // if (_formKey.currentState!.validate()) {
+                          // print(email.text);
+                          // print(password.text);
+                          //print('success');
+
                           // ignore: sort_child_properties_last
                           child: const Text("Login"),
                           textColor: Colors.white,
